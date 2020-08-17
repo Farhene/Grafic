@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Yik Yak</title>
+	<title>Profile</title>
 
 
 	  <!-- Bootstrap CSS -->
@@ -26,13 +26,12 @@
   			
     				<ul class="navbar-nav">
       					<li class="nav-item active">
-        					<a class="nav-link" href="#">HOME<span class="sr-only">(current)</span></a>
+        					<a class="nav-link" href="index.html">HOME<span class="sr-only">(current)</span></a>
       					</li>
 
       					<li class="nav-item">
-        					<a class="nav-link" href="profile.html">PROFILE</a>
-      					</li>		
-      	
+        					<a class="nav-link" href="#">PROFILE</a>
+      					</li>
 
 				    	<li class="nav-item dropdown">
 				        	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -44,14 +43,15 @@
 								<a class="dropdown-item" href="#">Hunter College</a>
 
 
-
 				          	<div class="dropdown-divider"></div>
 				          		<a class="dropdown-item" href="#">Video Games</a>
 				        	</div>
-				      	</li>
-						<li class="nav-item">
-								<h2>Welcome to The CUNY Yak, where you can post discussion posts anonymously within a geological radius! But also be aware that these posts do disappear after a couple hours! </h2>
-						</li>
+                          </li>
+                        
+                        <li class="nav-item">
+                            <h2>Welcome to The CUNY Yak, where you can post discussion posts anonymously within a geological radius! But also be aware that these posts do disappear after a couple hours! </h2>
+                        </li>
+
    					</ul>
 
 
@@ -59,31 +59,14 @@
 		</nav>
 
 
-	<div class="container">
-
-			<h1> Whatcha Thinking About? </h1>
-
-			<form action="" method="POST" accept-charset="utf-8">
-
-				<input type="text" id="ptitle" name="ptitle" placeholder="Post Title" required>
-
-					<br>
-
-				<input type="text" id="message" name="message" placeholder="Post Message" required>
-
-
-				<button type="submit">Post?</button>
-			</form>
-
+	<div class="container">            
+            <h1>What's Your Name?</h1>
+            
+            <form action="/action_page.php">
+                Full Name: <input type="text" name="name"><br><br>
+                <button type="button">Submit</button>
+            </form>
 	</div>
-
-
-
-	<div class="container post"></div>
-
-
-
-
 
 
  	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
