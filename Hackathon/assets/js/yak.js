@@ -1,8 +1,7 @@
 
-
-$("button[type='submit']").click(function(event){
+let login=false;
+$("#post").click(function(event){
 	let title= $("#ptitle").val();
-	
 	let message=$("#message").val();
 
 
@@ -13,47 +12,81 @@ $("button[type='submit']").click(function(event){
 
 		let today= new Date();
 		let date = (`${today.getMonth()+1}/${today.getDate()}/${today.getFullYear()}`);
+		var time = (`${today.getHours()-12}:${today.getMinutes()}:${today.getSeconds()}`);
+
+
+		var AmPm = (today.getHours() < 12) ? "AM" : "PM";  //I borrowed the code here to put in AM or PM logic
+
+
 		var hours = today.getHours()%12;
-		var PM;
-		if(hours > 12)
-		{
-			PM = true;
-		}
-		if(hours === 0 && PM === true)
-		{
-			var time = (`12:${today.getMinutes()}:${today.getSeconds()}:AM`);
-		}
-		else if(PM === true)
-		{
-			var time = (`${hours}:${today.getMinutes()}:${today.getSeconds()} PM`);
-		}
-		else{
-			var time = (`${hours}:${today.getMinutes()}:${today.getSeconds()} AM`);
-		}
 
-	
+ 		if(hours === 0 )
+ 		{
+ 			var time = (`12:${today.getMinutes()}:${today.getSeconds()}:AM`);
+ 		}
 
-		// grabbing new to do from input
-		
-		//$(this).val("");
-		// create a new li and add to ul
-		// using append methond
+ 		else{
+ 			var time = (`${hours}:${today.getMinutes()}:${today.getSeconds()} ${AmPm}`);
+ 		}
+
 	if(title==="" || message===""){
-		alert("a field or more are missing")
+		alert("a field is missing")
 		
 
-	}
-
-	else
-	{
-		$(".post").prepend(`<div class="card" >
+	}else{
+		$(".posts").prepend( 
+		`
+		<li class="thought">
   			<div class="card-body">
-    			<h5 class="card-title">${title}</h5>
+				<h5 class="card-title"><span class="delete"><i class="fas fa-trash"></i></span>${title}</h5>
     			<h6 class="card-subtitle mb-2 text-muted">${date}-${time}</h6>
     			<p class="card-text">${message}</p>
-  			</div>`
+  			</div>
+  		</li>`
+  		
   			);
+
+
 	}
+	setTimeout(rmvpost ,10000);
 				
 });
 
+function rmvpost(){
+	$(".posts li").last().remove();
+}
+
+
+
+$("ul").on("click",".delete", function(event){
+	// stops event from bubbling up
+	$(this).parent().parent().parent().remove();
+});
+
+
+
+$(".login").click(function(event){
+      let email = $(".email").val();
+      let pass = $(".pass").val();
+
+
+          $(".email").val("");
+          $(".pass").val("");
+      if(email ===""|| pass===""){
+        alert("You must enter a valid email and password");
+      }else{
+        alert("welcome to the homepage");
+        $("#loginForm").remove();
+       	login=true;
+       $(".navbar-nav").append(`<a href="test.html"><button class="btn btn-outline-danger my-2 my-sm-0 signout" type="submit">Sign-Out</button></a>`);
+        }
+       
+});
+
+$(".profile").click(function(event){
+	if(login===true){
+		window.navigate("profile.html");
+	}else{
+		alert("please log in");
+	}
+})
