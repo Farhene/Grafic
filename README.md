@@ -26,3 +26,6 @@ What to do next:
   - See how we can make the posts disappear after a few hours.
   - Try to import word filters to avoid cyber bullying.
   - No photographs can be uploaded due to privacy reasons.
+  - Use Google Maps, or a Maps API to try to work with user location idea.
+  - Import a sign in registration and authentication idea.
+  - Overall work with the design.
