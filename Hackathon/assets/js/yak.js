@@ -2,6 +2,7 @@
 
 $("button[type='submit']").click(function(event){
 	let title= $("#ptitle").val();
+	
 	let message=$("#message").val();
 
 
@@ -12,8 +13,23 @@ $("button[type='submit']").click(function(event){
 
 		let today= new Date();
 		let date = (`${today.getMonth()+1}/${today.getDate()}/${today.getFullYear()}`);
-		var time = (`${today.getHours()}:${today.getMinutes()}:${today.getSeconds()}`);
-
+		var hours = today.getHours()%12;
+		var PM;
+		if(hours > 12)
+		{
+			PM = true;
+		}
+		if(hours === 0 && PM === true)
+		{
+			var time = (`12:${today.getMinutes()}:${today.getSeconds()}:AM`);
+		}
+		else if(PM === true)
+		{
+			var time = (`${hours}:${today.getMinutes()}:${today.getSeconds()} PM`);
+		}
+		else{
+			var time = (`${hours}:${today.getMinutes()}:${today.getSeconds()} AM`);
+		}
 
 	
 
@@ -23,10 +39,13 @@ $("button[type='submit']").click(function(event){
 		// create a new li and add to ul
 		// using append methond
 	if(title==="" || message===""){
-		alert("a field is missing")
+		alert("a field or more are missing")
 		
 
-	}else{
+	}
+
+	else
+	{
 		$(".post").prepend(`<div class="card" >
   			<div class="card-body">
     			<h5 class="card-title">${title}</h5>
@@ -37,3 +56,4 @@ $("button[type='submit']").click(function(event){
 	}
 				
 });
+
