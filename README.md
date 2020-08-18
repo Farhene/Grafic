@@ -8,24 +8,25 @@ Team Name: GRAFIC
 Team Color: Gray
 
 Team Members:
-Farhene Sultana
+Farhene
 Christian
 Alfredo
 Ricky
 Iman
 
-Project Goal:
-  Creating a social media based app to satisfy the theme of helping with the transitioning from work to the home.
-  The application has the user post thoughts like a discussion post. 
-  We are aware this is similar to Yik Yak, but we want to put in more new features and ideas to show how this can help
-  out with the WFH transition for people who need someone to talk to in a local radius.
- 
- 
+Project Goal: Creating a social media based app to satisfy the theme of helping with the transitioning from work to the home. The application has the user post thoughts like a discussion post. We are aware this is similar to Yik Yak, but we want to put in more new features and ideas to show how this can help out with the WFH transition for people who need someone to talk to in a local radius.
+
+
+What We Accomplished:
+- Deleting post
+- Uploading posts
+- No photographs function of course
+
 What to do next:
 
-  - See how we can make the posts disappear after a few hours.
-  - Try to import word filters to avoid cyber bullying.
-  - No photographs can be uploaded due to privacy reasons.
-  - Use Google Maps, or a Maps API to try to work with user location idea.
-  - Import a sign in registration and authentication idea.
-  - Overall work with the design.
+- See how we can make the posts disappear after a few hours.
+- Try to import word filters to avoid cyber bullying.
+- No photographs can be uploaded due to privacy reasons.
+- Use Google Maps, or a Maps API to try to work with user location idea.
+- Import a sign in registration and authentication idea.
+- Overall work with the design.
