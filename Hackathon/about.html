@@ -1,187 +1,165 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>The CUNY Yak</title>
+  <head>
+    <title>The CUNY Yak</title>
 
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
 
-	  <!-- Bootstrap CSS -->
-	   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/about.css" />
 
-	   <link rel="stylesheet" type="text/css" href="assets/css/about.css">
+    <script
+      type="text/javascript"
+      src="assets/js/lib/jquery-3.5.1.min.js"
+    ></script>
+  </head>
+  <body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
 
-	   <script type="text/javascript" src="assets/js/lib/jquery-3.5.1.min.js"></script>
-</head>
-<body>
-
-
-		<!-- The core Firebase JS SDK is always required and must be listed first -->
-		<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
-
-		<!-- TODO: Add SDKs for Firebase products that you want to use
+    <!-- TODO: Add SDKs for Firebase products that you want to use
 		     https://firebase.google.com/docs/web/setup#available-libraries -->
-		<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-analytics.js"></script>
 
-	
+    <nav
+      id="mainNavBar"
+      class="navbar navbar-dark bg-dark navbar-expand-md py-0 fixed-top"
+    >
+      <a class="navbar-brand" href="#"> The CUNY Yak</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navLinks"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
+      <div class="collapse navbar-collapse" id="navLinks">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">HOME</a>
+          </li>
 
-	<nav id="mainNavBar" class="navbar navbar-dark bg-dark navbar-expand-md py-0 fixed-top">
- 			
-  		<a class="navbar-brand" href="#"> The CUNY Yak</a>
-  				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navLinks"aria-label="Toggle navigation">
-    				<span class="navbar-toggler-icon"></span>
-  				</button>
+          <li class="nav-item">
+            <a class="nav-link active" href="about.html"
+              >ABOUT<span class="sr-only">(current)</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-				<div class="collapse navbar-collapse" id="navLinks">
-  			
-    				<ul class="navbar-nav">
-      					<li class="nav-item">
-        					<a class="nav-link" href="index.html">HOME</a>
-      					</li>      		
+    <h1 class="top-bar"></h1>
 
-     		 			<li class="nav-item">
-								<a class="nav-link active " href="about.html" >ABOUT<span class="sr-only">(current)</span></a>
-						</li>			
-				    </ul>
+    <div id="stripe"></div>
 
-				</div> 		
-		</nav>
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-4 col-sm-12 fade-in">
+          <div class="card">
+            <img
+              src="images/C.png"
+              alt="John"
+              style="width: 100%;"
+            />
+            <h1>Christian Vargas Polo</h1>
+            <p class="title">Brooklyn College</p>
+            <p>CUNY</p>
+            <a href="https://www.linkedin.com/in/christianpolo"><i class="fa fa-linkedin"></i></a>
+            <p><button>Contact</button></p>
+          </div>
+        </div>
 
+        <div class="col-md-4 col-sm-12 fade-in">
+          <div class="card">
+            <img
+              src="images/A.png"
+              alt="John"
+              style="width: 100%;"
+            />
+            <h1>Alfredo Morales</h1>
+            <p class="title">Hunter College</p>
+            <p>CUNY</p>
+            <a href="https://www.linkedin.com/in/alfredomorales24/"><i class="fa fa-linkedin"></i></a>
+            <p><button>Contact</button></p>
+          </div>
+        </div>
 
-		<h1 class="top-bar"></h1>
+        <div class="col-md-4 col-sm-12">
+          <div class="card fade-in">
+            <img
+              src="images/F.png"
+              alt="John"
+              style="width: 100%;"
+            />
+            <h1>Farhene Sultana</h1>
+            <p class="title">Hunter College</p>
+            <p>CUNY</p>
+            <a href="https://www.linkedin.com/in/farhene-sultana-78a56018b/"><i class="fa fa-linkedin"></i></a>
+            <p><button>Contact</button></p>
+          </div>
+        </div>
+      </div>
+    
+    <br /><br /><br /><br /><br /><br /><br /> <br>
 
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-4 col-sm-12 fade-in">
+          <div class="card">
+            <img
+              src="images/R.png"
+              alt="John"
+              style="width: 100%;"
+            />
+            <h1>Ricky Rodriguez</h1>
+            <p class="title">Hunter College</p>
+            <p>CUNY</p>
+            <a href="https://www.linkedin.com/in/ricky-rodriguez-2017/"><i class="fa fa-linkedin"></i></a>
+            <p><button>Contact</button></p>
+          </div>
+        </div>
 
-		<div id="stripe"></div>
-	
-		
-			
-		<div class="row">
-			
-			<div class="column">
-				<div class="card">
-				  <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="John" style="width:100%">
-				  <h1>John Doe</h1>
-				  <p class="title">CEO & Founder, Example</p>
-				  <p>CUNY</p>
-				  <a href="#"><i class="fa fa-twitter"></i></a> 
-				  <a href="#"><i class="fa fa-linkedin"></i></a> 
-				  <a href="#"><i class="fa fa-facebook"></i></a> 
-				  <p><button>Contact</button></p>
-				</div>
-			</div>
-	
-	
-			<div class="column">
-				<div class="card">
-				  <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="John" style="width:100%">
-				  <h1>John Doe</h1>
-				  <p class="title">CEO & Founder, Example</p>
-				  <p>CUNY</p>
-				  <a href="#"><i class="fa fa-twitter"></i></a> 
-				  <a href="#"><i class="fa fa-linkedin"></i></a> 
-				  <a href="#"><i class="fa fa-facebook"></i></a> 
-				  <p><button>Contact</button></p>
-				</div>
-			</div>
-	
-	
-			<div class="column">
-				<div class="card">
-				  <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="John" style="width:100%">
-				  <h1>John Doe</h1>
-				  <p class="title">CEO & Founder, Example</p>
-				  <p>CUNY</p>
-				  <a href="#"><i class="fa fa-twitter"></i></a> 
-				  <a href="#"><i class="fa fa-linkedin"></i></a> 
-				  <a href="#"><i class="fa fa-facebook"></i></a> 
-				  <p><button>Contact</button></p>
-				</div>
-			</div>
-	
-	
-			<div class="column">
-				<div class="card">
-				  <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="John" style="width:100%">
-				  <h1>John Doe</h1>
-				  <p class="title">CEO & Founder, Example</p>
-				  <p>CUNY</p>
-				  <a href="#"><i class="fa fa-twitter"></i></a> 
-				  <a href="#"><i class="fa fa-linkedin"></i></a> 
-				  <a href="#"><i class="fa fa-facebook"></i></a> 
-				  <p><button>Contact</button></p>
-				</div>
-			</div>
-		</div>
-			<br><br><br><br><br><br><br>
-	
-	
-		<div class="row">
-			
-			<div class="column">
-				<div class="card">
-				  <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="John" style="width:100%">
-				  <h1>John Doe</h1>
-				  <p class="title">CEO & Founder, Example</p>
-				  <p>CUNY</p>
-				  <a href="#"><i class="fa fa-twitter"></i></a> 
-				  <a href="#"><i class="fa fa-linkedin"></i></a> 
-				  <a href="#"><i class="fa fa-facebook"></i></a> 
-				  <p><button>Contact</button></p>
-				</div>
-			</div>
-	
-	
-			<div class="column">
-				<div class="card">
-				  <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="John" style="width:100%">
-				  <h1>John Doe</h1>
-				  <p class="title">CEO & Founder, Example</p>
-				  <p>CUNY</p>
-				  <a href="#"><i class="fa fa-twitter"></i></a> 
-				  <a href="#"><i class="fa fa-linkedin"></i></a> 
-				  <a href="#"><i class="fa fa-facebook"></i></a> 
-				  <p><button>Contact</button></p>
-				</div>
-			</div>
-	
-	
-			<div class="column">
-				<div class="card">
-				  <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="John" style="width:100%">
-				  <h1>John Doe</h1>
-				  <p class="title">CEO & Founder, Example</p>
-				  <p>CUNY</p>
-				  <a href="#"><i class="fa fa-twitter"></i></a> 
-				  <a href="#"><i class="fa fa-linkedin"></i></a> 
-				  <a href="#"><i class="fa fa-facebook"></i></a> 
-				  <p><button>Contact</button></p>
-				</div>
-			</div>
-	
-	
-			<div class="column">
-				<div class="card">
-				  <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="John" style="width:100%">
-				  <h1>John Doe</h1>
-				  <p class="title">CEO & Founder, Example</p>
-				  <p>CUNY</p>
-				  <a href="#"><i class="fa fa-twitter"></i></a> 
-				  <a href="#"><i class="fa fa-linkedin"></i></a> 
-				  <a href="#"><i class="fa fa-facebook"></i></a> 
-				  <p><button>Contact</button></p>
-				</div>
-			</div>
-		</div>
-	
-	
-	
-	
-		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-	
-		<script src="https://kit.fontawesome.com/e806958a5f.js" crossorigin="anonymous"></script>
-	
-	
-		<!-- <script type="text/javascript" src="assets/js/yak.js"></script> -->
-	
-	</body>
-	</html>
+        <div class="col-md-4 col-sm-12 fade-in">
+          <div class="card">
+            <img
+              src="images/I.png"
+              alt="John"
+              style="width: 100%;"
+            />
+            <h1>Iman Abakoyas</h1>
+            <p class="title">Lehman College</p>
+            <p>CUNY</p>
+            <a href="https://www.linkedin.com/in/imanjabakoyas/"><i class="fa fa-linkedin"></i></a>
+            <p><button>Contact</button></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://kit.fontawesome.com/e806958a5f.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- <script type="text/javascript" src="assets/js/yak.js"></script> -->
+  </body>
+</html>
