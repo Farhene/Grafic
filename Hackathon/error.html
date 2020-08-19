@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sorry...</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!--Maps stuff-->
+    <link rel="stylesheet" href="assets/css/error.css">
+    <script src="assets/js/maps.js"></script>
+    <script defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFXY2dx8oaeL9wTegcl2HMui-IIYYchJY&callback=initMap">
+    </script>
+  </head>
+  <body>
+    <div style="padding-top: 8mm;"></div>
+    <div class="card" style="opacity: 80%;">
+      <div class="card-body">
+          <div style="text-align: center;">
+              <h1 title="Title">CUNY Yak</h1>
+              <p>If you are in this page, it is because of one of the following reasons:</p>
+              <ul style="display: inline-block; text-align: left;">
+                <li>You are not in the NYC area. CUNY Yak only works within the NYC area for now</li>
+                <li>You have denied location permision</li>
+                <li>Or another type of error</li>
+            </ul>
+          </div>
+      </div>
+  </div>
+  <div style="padding-top: 4mm;"></div>
+  <iframe src="maps.html" height="600" width="900" style="justify-content: center"></iframe>
+  </body>
+</html>
