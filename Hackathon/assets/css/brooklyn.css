@@ -12,7 +12,7 @@
 .top-bar {
   color: white;
   text-align: center;
-  background-color: #0c2ea8;
+  background-color: maroon;
   margin: 0;
   font-weight: normal;
   text-transform: uppercase;
@@ -38,7 +38,7 @@
 
 .thought {
   background-color: white;
-  color: #1be098;
+  color: goldenrod;
   margin-top: 1em;
 }
 
@@ -59,7 +59,7 @@ body {
   margin: 0;
   padding: 40px 0 0;
   font-family: Roboto;
-  background-color: #232323;
+  background-color: gray;
   /*font-family: "Montererrat", "Avenir";*/
 }
 
@@ -82,7 +82,7 @@ button:hover {
   background-color: steelblue;
 }
 h1 {
-  color: white;
+  color: goldenrod;
 }
 #btnLogout {
   display: none;
@@ -94,7 +94,7 @@ h1 {
 }
 
 .delete {
-  background-color: #e74e3c;
+  background-color: darkred;
   height: 25px;
   margin-right: 15px;
   text-align: center;
