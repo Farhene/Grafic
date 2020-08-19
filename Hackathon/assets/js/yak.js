@@ -17,24 +17,20 @@ $("#post").click(function(event){
 
 
 		//format date and time
-	var hours = today.getHours()%12;
- 		var PM;
- 		if(hours > 12)
- 		{
- 			PM = true;
- 		}
- 		if(hours === 0 && PM === true)
+
+		var AmPm = (today.getHours() < 12) ? "AM" : "PM";  //I borrowed the code here to put in AM or PM logic
+
+
+		var hours = today.getHours()%12;
+
+ 		if(hours === 0 )
  		{
  			var time = (`12:${today.getMinutes()}:${today.getSeconds()}:AM`);
  		}
- 		else if(PM === true)
- 		{
- 			var time = (`${hours}:${today.getMinutes()}:${today.getSeconds()} PM`);
- 		}
- 		else{
- 			var time = (`${hours}:${today.getMinutes()}:${today.getSeconds()} AM`);
- 		}
 
+ 		else{
+ 			var time = (`${hours}:${today.getMinutes()}:${today.getSeconds()} ${AmPm}`);
+ 		}
 
 
  		// if the title or message field was empty
@@ -144,6 +140,7 @@ $("ul").on("click",".delete", function(event){
 		  		$("#btnLogout").toggle();
 		  		// show the log in form
 		  		$("#loginForm").toggle();
+		  		$(".profile").toggle();
 
 		  		});
 
@@ -158,6 +155,7 @@ $("ul").on("click",".delete", function(event){
 					 $("#loginForm").toggle();
 					 // show the log out button
 					 $("#btnLogout").toggle();
+					 $(".profile").toggle();
 					  
 					// else if not logged in
 				}else{
@@ -168,3 +166,5 @@ $("ul").on("click",".delete", function(event){
 				}
 
 			});
+
+
