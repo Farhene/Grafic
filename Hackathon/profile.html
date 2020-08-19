@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Profile</title>
+	<title>The CUNY Yak</title>
 
 
 	  <!-- Bootstrap CSS -->
 	   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-	   <link rel="stylesheet" type="text/css" href="assets/css/yak.css">
+	   <link rel="stylesheet" type="text/css" href="assets/css/profile.css">
 
-	   <!-- <script type="text/javascript" src="assets/js/lib/jquery-3.5.1.min.js"></script> -->
-
-
+	   <script type="text/javascript" src="assets/js/lib/jquery-3.5.1.min.js"></script>
 </head>
 <body>
+
+
+
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+
+		<!-- TODO: Add SDKs for Firebase products that you want to use
+		     https://firebase.google.com/docs/web/setup#available-libraries -->
+		<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-analytics.js"></script>
+
+	
 
 	<nav id="mainNavBar" class="navbar navbar-dark bg-dark navbar-expand-md py-0 fixed-top">
  			
@@ -25,55 +34,59 @@
 				<div class="collapse navbar-collapse" id="navLinks">
   			
     				<ul class="navbar-nav">
-      					<li class="nav-item active">
-        					<a class="nav-link" href="index.html">HOME<span class="sr-only">(current)</span></a>
+      					<li class="nav-item">
+        					<a class="nav-link" href="index.html">HOME</a>
       					</li>
 
       					<li class="nav-item">
-        					<a class="nav-link" href="#">PROFILE</a>
+        					<a class="nav-link active" href="#">PROFILE <span class="sr-only">(current)</span></a>
       					</li>
+      		
+
+     		 			<li class="nav-item">
+        					<a class="nav-link" href="about.html">ABOUT</a>
+      					</li>			
+      	
 
 				    	<li class="nav-item dropdown">
 				        	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				         	 Chats
 				        	</a>
 				       		 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-				         		 <a class="dropdown-item" href="#">Brooklyn College</a>
-				          		<a class="dropdown-item" href="#">City Tech College</a>
-								<a class="dropdown-item" href="#">Hunter College</a>
-
-
-				          	<div class="dropdown-divider"></div>
-				          		<a class="dropdown-item" href="#">Video Games</a>
+				         		 <a class="dropdown-item" href="brooklyn.html">Brooklyn College</a>
+				          		<a class="dropdown-item" href="hunter.html">Hunter College</a>
 				        	</div>
-                          </li>
-                        
-                        <li class="nav-item">
-                            <h2>Welcome to The CUNY Yak, where you can post discussion posts anonymously within a geological radius! But also be aware that these posts do disappear after a couple hours! </h2>
-                        </li>
-
-   					</ul>
+				      	</li>
+				      </ul>
 
 
 				</div> 		
 		</nav>
 
 
-	<div class="container">            
-            <h1>What's Your Name?</h1>
-            
-            <form action="/action_page.php">
-                Full Name: <input type="text" name="name"><br><br>
-                <button type="button">Submit</button>
-            </form>
+<h1 class="top-bar"></h1>
+
+
+	<div id="stripe"></div>
+
+	<div class="card">
+	  <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="John" style="width:100%">
+	  <h1>John Doe</h1>
+	  <p class="title">CEO & Founder, Example</p>
+	  <p>CUNY</p>
+	  <a href="#"><i class="fa fa-twitter"></i></a> 
+	  <a href="#"><i class="fa fa-linkedin"></i></a> 
+	  <a href="#"><i class="fa fa-facebook"></i></a> 
+	  <p><button>Contact</button></p>
 	</div>
 
-
- 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
+    <script src="https://kit.fontawesome.com/e806958a5f.js" crossorigin="anonymous"></script>
 
-    <script type="text/javascript" src="assets/js/yak.js"></script>
+
+    <!-- <script type="text/javascript" src="assets/js/yak.js"></script> -->
+
 </body>
 </html>

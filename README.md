@@ -21,12 +21,12 @@ What We Accomplished:
 - Deleting post
 - Uploading posts
 - No photographs function of course
+- Post disappears after 10 seconds (for demonstration purposes -- else it would be 24 hours)
+- Imported a sign in registration and authentication idea.
+
 
 What to do next:
 
-- See how we can make the posts disappear after a few hours.
 - Try to import word filters to avoid cyber bullying.
-- No photographs can be uploaded due to privacy reasons.
 - Use Google Maps, or a Maps API to try to work with user location idea.
-- Import a sign in registration and authentication idea.
 - Overall work with the design.
