@@ -49,6 +49,7 @@ $("#post").click(function(event){
 		$(".posts").prepend( 
 			// containing the message and date
 		`
+
 		<li class="thought">
   			<div class="card-body">
 				<h5 class="card-title"><span class="delete"><i class="fas fa-trash"></i></span>${title}</h5>
@@ -144,6 +145,7 @@ $("ul").on("click",".delete", function(event){
 		  		$("#btnLogout").toggle();
 		  		// show the log in form
 		  		$("#loginForm").toggle();
+		  		$(".profile").toggle();
 
 		  		});
 
@@ -158,6 +160,7 @@ $("ul").on("click",".delete", function(event){
 					 $("#loginForm").toggle();
 					 // show the log out button
 					 $("#btnLogout").toggle();
+					 $(".profile").toggle();
 					  
 					// else if not logged in
 				}else{
@@ -168,3 +171,5 @@ $("ul").on("click",".delete", function(event){
 				}
 
 			});
+
+

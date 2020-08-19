@@ -91,6 +91,12 @@ h1{
 }
 #btnLogout{
 	display: none;
+	margin-left: 10em;
+}
+
+.profile{
+	display: none;
+	
 }
 
 .delete{

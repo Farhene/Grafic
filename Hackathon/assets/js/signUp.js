@@ -17,6 +17,7 @@
 
 		  // when sign up button clicked
 		  	$("#btnSignUp").click(function(event){
+		  		let made ="";
 		  			//get email and pass
 				const textEmail = document.getElementById('txtEmail');
 		  		const textPassword = document.getElementById('txtPassword');
@@ -29,7 +30,12 @@
 
 		  		// sign up
 		  		const promise = auth.createUserWithEmailAndPassword(email,pass);
-		  		promise.catch(event => alert(event.message));
+		  		made=true;
+		  		promise.catch(event => alert(event.message,made=false) );
+
+		  		// window.location.replace("index.html");
+
+
 
 		  		// clear fields
 		  		$("#txtEmail").val("");
