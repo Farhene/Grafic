@@ -49,7 +49,6 @@ $("#post").click(function(event){
 		$(".posts").prepend( 
 			// containing the message and date
 		`
-
 		<li class="thought">
   			<div class="card-body">
 				<h5 class="card-title"><span class="delete"><i class="fas fa-trash"></i></span>${title}</h5>
@@ -169,5 +168,3 @@ $("ul").on("click",".delete", function(event){
 				}
 
 			});
-
-
