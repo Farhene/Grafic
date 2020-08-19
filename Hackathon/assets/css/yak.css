@@ -89,7 +89,9 @@ button:hover{
 h1{
 	color: steelblue;
 }
-
+#btnLogout{
+	display: none;
+}
 
 .delete{
 	background-color: #e74e3c;
@@ -110,5 +112,5 @@ li:hover .delete{
 
 
 #loginForm{
-	padding-left: 12em;
+	padding-left: 10em;
 }
