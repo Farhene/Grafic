@@ -7,8 +7,8 @@ $("#post").click(function(event){
 
 	
 		// clear the textbox
-		$("#ptitle").val("");
-		$("#message").val("");
+		// $("#ptitle").val("");
+		// $("#message").val("");
 
 		// get the current date and time
 		let today= new Date();
@@ -56,7 +56,26 @@ $("#post").click(function(event){
   			);
 
 
+
+
+		firebase.database().ref("Post").push().set({
+
+		  		
+		  		
+
+		  		"title": title,
+		  		"message": message,
+		  		"date": date,
+		  		"time": time,
+
+		  			
+		  	});
+
+
 	}
+
+		$("#ptitle").val("");
+		$("#message").val("");
 
 	// remove the post after 10 seconds
 	setTimeout(rmvpost ,10000);
@@ -166,3 +185,13 @@ $("ul").on("click",".delete", function(event){
 				}
 
 			});
+
+
+
+
+			
+
+
+
+	
+		  
