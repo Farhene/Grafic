@@ -1,5 +1,6 @@
 /*
-    Majority of the code is from Google API sample code
+    Majority of the code is from the Google API sample code
+    I just edited and combined multiple sample codes
 */
 
 // Note: This example requires that you consent to location sharing when

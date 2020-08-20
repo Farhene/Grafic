@@ -1,100 +1,90 @@
+<!--Main Page-->
+
 <!DOCTYPE html>
 <html>
 <head>
 	<title>The CUNY Yak</title>
 
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-	  <!-- Bootstrap CSS -->
-	   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<!-- CSS and Javascript files-->
+	<link rel="stylesheet" type="text/css" href="assets/css/yak.css">
+	<script type="text/javascript" src="assets/js/lib/jquery-3.5.1.min.js"></script>
 
-	   
-	   <link rel="stylesheet" type="text/css" href="assets/css/yak.css">
-
-	   <script type="text/javascript" src="assets/js/lib/jquery-3.5.1.min.js"></script>
-
-	   	<!--To block page if outside NYC area-->
-		<script src="assets/js/blockPage.js"></script>
+	<!--To block page if outside NYC area-->
+	<script src="assets/js/blockPage.js"></script>
 </head>
+
+<!--Function getLocation() will either block or allow user to post on main page-->
 <body onload="getLocation()">
 
   <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
-
 	<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase.js"></script>
-
 	<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-database.js"></script>
-
 	<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-auth.js"></script>
 
 
 	<nav id="mainNavBar" class="navbar navbar-dark bg-dark navbar-expand-md py-0 fixed-top">
  			
 			<a class="navbar-brand" href="#"> The CUNY Yak</a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navLinks"aria-label="Toggle navigation">
-					  <span class="navbar-toggler-icon"></span>
-					</button>
-  
-				  <div class="collapse navbar-collapse" id="navLinks">
-				
-					  <ul class="navbar-nav mr-auto">
-							<li class="nav-item active">
-							  <a class="nav-link" href="#">HOME<span class="sr-only">(current)</span></a>
-							</li>
-  
-							<li class="nav-item profile">
-							  <a class="nav-link" id="profile" href="profile.html">PROFILE</a>
-							</li>
-				
-  
-							<li class="nav-item">
-							  <a class="nav-link" href="about.html">ABOUT</a>
-							</li>			
-			
-  
-						  <li class="nav-item dropdown profile">
-							  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								Chats
-							  </a>
-								  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-									<a class="dropdown-item" href="hunter.html">Hunter College</a>
-									<a class="dropdown-item" href="brooklyn.html">Brooklyn College</a>
-							</li>
-  
-					 
-  
-  
-						  
-  
-  
-						 </ul>
-  
-						 
-  
-							<div class="form-inline" id="loginForm">
-									<input class="form-control mr-sm-2 email" type="email" id="txtEmail" placeholder="Email" aria-label="Email">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navLinks"aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
 
-									<input class="form-control mr-sm-2 pass" type="password" id="txtPassword" placeholder="Password" aria-label="Password">
+			<div class="collapse navbar-collapse" id="navLinks">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">HOME<span class="sr-only">(current)</span></a>
+					</li>
 
+					<li class="nav-item profile">
+						<a class="nav-link" id="profile" href="profile.html">PROFILE</a>
+					</li>
+		
+					<li class="nav-item">
+						<a class="nav-link" href="about.html">ABOUT</a>
+					</li>			
 
-									
+					<li class="nav-item dropdown profile">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Chats
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="hunter.html">Hunter College</a>
+							<a class="dropdown-item" href="brooklyn.html">Brooklyn College</a>
+						</div>
+					</li>		
+				</ul>
 
-									<button  id="btnLogin" class="btn btn-outline-primary my-2 my-sm-0 login" type="submit">Login</button>
-
-									<div class="divider"></div>
-									 
-										 <button id="btnSignUp" class="btn btn-outline-success my-2 my-sm-0" type="submit"><a href="signUp.html">Sign-Up</a></button>
-
-
-									
-
-								
 					
-							  </div>
-							 
+
+					<div class="form-inline" id="loginForm">
+							<input class="form-control mr-sm-2 email" type="email" id="txtEmail" placeholder="Email" aria-label="Email">
+
+							<input class="form-control mr-sm-2 pass" type="password" id="txtPassword" placeholder="Password" aria-label="Password">
+
+
+							
+
+							<button  id="btnLogin" class="btn btn-outline-primary my-2 my-sm-0 login" type="submit">Login</button>
+
+							<div class="divider"></div>
+								
+									<button id="btnSignUp" class="btn btn-outline-success my-2 my-sm-0" type="submit"><a href="signUp.html">Sign-Up</a></button>
+
+
+							
 
 						
+			
+						</div>
+						
+
+				
 
 
-							<button id="btnLogout"  class="btn btn-outline-danger my-2 my-sm-0" type="submit">Sign-Out</button>
+					<button id="btnLogout"  class="btn btn-outline-danger my-2 my-sm-0" type="submit">Sign-Out</button>
 				  </div> 		
 		  </nav>
   
