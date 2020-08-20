@@ -166,5 +166,3 @@ $("ul").on("click",".delete", function(event){
 				}
 
 			});
-
-
