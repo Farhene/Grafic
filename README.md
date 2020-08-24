@@ -36,3 +36,7 @@ What to do next for the future:
 - Make the user only be able to access other threads posted within their 5 mile radius.
 - Set up a personal profile for users
 - Add a specific server for CTP students as well to encourage commodity with a sense of a camaraderie.
+
+# How to Run this Program
+- Git clone the files
+- Then click on Index.html to open the web application
